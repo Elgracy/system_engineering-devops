@@ -1,10 +1,4 @@
 #!/usr/bin/env bash
-# Displays a message indefinitely and ignores SIGTERM
-
+# Runs indefinitely and handles SIGTERM without exiting
 trap 'echo "I am invincible!!!"' SIGTERM
-
-while true
-do
-    echo "To infinity and beyond"
-    sleep 2
-done
+while true; do echo "To infinity and beyond"; sleep 2; done
