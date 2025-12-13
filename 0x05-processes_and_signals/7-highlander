@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Runs indefinitely and handles SIGTERM without stopping
+# Displays a message indefinitely and ignores SIGTERM
 
-trap 'echo "I am invincible!!!"; echo "OK"' TERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
 while true
 do
