@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
-# Runs indefinitely and handles SIGTERM without exiting
-trap 'echo "I am invincible!!!"' SIGTERM
-while true; do echo "To infinity and beyond"; sleep 2; done
+# Script that displays "To infinity and beyond" indefinitely
+# Displays "OK" when receiving a SIGTERM signal
+
+# Trap SIGTERM and print "OK"
+trap 'echo "OK"; exit 0' SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
