@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
-# Runs indefinitely and ignores SIGTERM
-trap 'echo "I am invincible!!!"' TERM
-while true; do echo "To infinity and beyond"; sleep 2; done
+# Runs indefinitely and handles SIGTERM without stopping
+
+trap 'echo "I am invincible!!!"; echo "OK"' TERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
